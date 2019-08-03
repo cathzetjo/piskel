@@ -1,5 +1,10 @@
-# Worklog
+# Piskel
+### You can draw, paint, choose color, add frames, run animation.
 
+[Link on gh-pages](https://cathzetjo.github.io/piskel/)
+
+
+## Worklog
 #### To show process of development it needs to describe small amount of time and what work was accomplish during that time.
 
 | Start time  | End time | Time spent | Feature |
