@@ -1,0 +1,90 @@
+.right-bar {
+  position: relative;
+  flex-shrink: 0;
+  height: 94.45vh;
+  width: 280px;
+  background: rgba(25, 25, 65, 0.87) url(../Assets/img/noize.png) repeat 100% 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #020223;
+  border-left: none;
+
+  .animation-preview {
+    margin-top: 40px;
+    height: 220px;
+    width: 220px;
+    background-image: url(../Assets/img/background.png);
+    background-size: contain;
+    border: 1px black solid;
+    border-radius: 5px;
+    box-shadow: -1px 0px 5px 5px #050115, 0px 0px 1px #050115;
+
+    &-img {
+      width: 220px;
+      height: 220px;
+      image-rendering: pixelated;
+    }
+  }
+  .range {
+    width: 70%;
+    right: 15%;
+    position: absolute;
+    outline: none;
+    margin-top: 25px;
+  }
+
+  .fps-slider {
+    display: flex;
+  }
+
+  .fps-num {
+    margin-top: 60px;
+  }
+
+  input[type=range] {
+    -webkit-appearance: none;
+    background: transparent;
+
+    &::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 12.8px;
+      cursor: pointer;
+      animate: 0.2s;
+      box-shadow: 0 0 5px 2px #1b1c4b;
+      background: #66659c;
+      border-radius: 25px;
+      border: 0px solid #000101;
+    }
+
+    &::-webkit-slider-thumb {
+      border: 7px solid #14152d;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%  ;
+      cursor: pointer;
+      margin-top: -8px;
+      background: #252674;
+      -webkit-appearance: none;
+    }
+  }
+
+  .full-screen {
+
+    &-btn {
+      margin-top: 50px;
+      height: 45px;
+      background-color: #14152d;
+      border: 2px solid #060d03;
+      border-radius: 5px;
+      outline: none;
+
+      &:hover {
+        color: #02002d;
+        background-color: rgba(20, 21, 45, .4);
+        border: 2px solid #14152d;
+      }
+    }
+  }
+}
