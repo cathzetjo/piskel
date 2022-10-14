@@ -98,7 +98,7 @@ export default class Canvas extends Component {
       canvasStyle.top = `-${(this.containerSize - this.canvasField) / 2}px`;
     }
     return (
-      <div style={{ width: `${this.canvasField}px` }} className='canvas-main' onWheel={this.onWheel.bind(this)}>
+      <div className='canvas-main' onWheel={this.onWheel.bind(this)}>
         <div style={backgroundStyle} id="main-canvas-container">
           <div style={backgroundStyle} className='canvas-background'/>
           <canvas style={canvasStyle} className="canvas" id="main-canvas" width={this.props.canvasSize} height={this.props.canvasSize}/>

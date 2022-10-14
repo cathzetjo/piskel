@@ -8,7 +8,7 @@ import * as bucket from '../Tools/bucket';
 import * as colorPicker from '../Tools/colorPicker';
 import * as eraser from '../Tools/eraser';
 import * as line from '../Tools/line';
-import * as square from '../Tools/square';
+import * as rectangle from '../Tools/rectangle';
 import FramesBar from './FramesBar';
 import * as frames from '../Tools/framesPicker';
 import RightBar from './RightBar';
@@ -20,8 +20,8 @@ export default class Main extends Component {
       frames: [{ number: 0, id: 0, img: [] }],
       activeFrame: 0,
       canvasSize: 32,
-      firstColor: { r: 126, g: 130, b: 241 },
-      secondColor: { r: 98, g: 242, b: 108 },
+      firstColor: { r: 105, g: 51, b: 204 },
+      secondColor: { r: 233, g: 242, b: 99 },
     };
 
     this.setActiveTool = this.setActiveTool.bind(this);
@@ -64,7 +64,7 @@ export default class Main extends Component {
       this.setTool(line);
       break;
     case 5:
-      this.setTool(square);
+      this.setTool(rectangle);
       break;
     default:
       break;

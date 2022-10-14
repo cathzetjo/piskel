@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 
 import marker from '../Assets/img/markerPen.png';
 import bucket from '../Assets/img/bucket.png';
-import colorDropper from '../Assets/img/colorDropper.png';
+import pipette from '../Assets/img/pipette.png';
 import eraser from '../Assets/img/eraser.png';
 import line from '../Assets/img/line.png';
-import square from '../Assets/img/square.png';
+import rectangle from '../Assets/img/rectangle.png';
 
 function toHex(c) {
   const hex = c.toString(16);
@@ -70,7 +70,7 @@ export default class LeftBar extends Component {
         </div>
         <div className={`tool${(this.props.activeToolId === 2) ? ' activeTool' : ''}`}
           onClick={() => this.props.setActiveTool(2)}>
-          <img src={colorDropper} alt=""/>
+          <img src={pipette} alt=""/>
         </div>
         <div className={`tool${(this.props.activeToolId === 3) ? ' activeTool' : ''}`}
              onClick={() => this.props.setActiveTool(3)}>
@@ -82,7 +82,7 @@ export default class LeftBar extends Component {
         </div>
         <div className={`tool${(this.props.activeToolId === 5) ? ' activeTool' : ''}`}
              onClick={() => this.props.setActiveTool(5)}>
-          <img src={square} alt=""/>
+          <img src={rectangle} alt=""/>
         </div>
         <div className="color-palette">
           <input type="color"

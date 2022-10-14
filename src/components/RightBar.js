@@ -61,7 +61,7 @@ export default class RightBar extends Component {
       <div className='right-bar'>
         <div className='animation-preview'><img className='animation-preview-img' alt=""/></div>
         <div className='fps-slider'>
-          <label htmlFor="range" className='fps-num'>&#9193;&#160; {this.state.FPS} FPS &#160;&#9194;</label>
+          <label htmlFor="range" className='fps-num'>{this.state.FPS} FPS </label>
           <input className='range' id="range" type="range" min="1" max="24" step="1" defaultValue="1"
             onChange={this.changeFPSNumber}/>
         </div>

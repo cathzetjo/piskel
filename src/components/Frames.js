@@ -5,7 +5,7 @@ export default class FramePreview extends Component {
     super(props);
     this.state = { elemPos: { y: 0 } };
     this.shift = { y: 0, x: 0 };
-    this.elemId = `preview-frame-${this.props.number}`;
+    this.elemId = `preview-frame-${this.props.number+1}`;
     this.setActiveFrame = this.setActiveFrame.bind(this);
     this.deleteFrame = this.deleteFrame.bind(this);
     this.startDrag = this.startDrag.bind(this);
@@ -30,7 +30,10 @@ export default class FramePreview extends Component {
   }
 
   deleteFrame() {
-    this.props.onDeleteFrame(this.props.number);
+    const frames = document.querySelectorAll(".frames-bar-frame-preview ");
+    if (frames.length>1) {
+      this.props.onDeleteFrame(this.props.number);
+    }
   }
 
   setActiveFrame(e) {
@@ -101,7 +104,7 @@ export default class FramePreview extends Component {
           frame-preview-number={this.props.number}
           id={this.elemId}>
           <canvas style={canvasScale} className='frames-bar-frame-preview-canvas' width="32" height="32"/>
-          <div className="frames-bar-frame-preview-num">{this.props.number}</div>
+          <div className="frames-bar-frame-preview-num">{this.props.number+1}</div>
           <button className="frames-bar-frame-preview-btn delete-btn" onClick={this.deleteFrame}/>
           <button className="frames-bar-frame-preview-btn copy-btn" onClick={this.props.copyFrame}/>
         </div>
